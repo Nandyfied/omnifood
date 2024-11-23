@@ -1,0 +1,811 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- Font weights
+Default: 400
+
+- Line heights
+Default: 1
+
+
+- Letter spacing
+
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints : #fdf2e9
+- Shades: 
+
+- Accents:
+- Greys
+#555
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER-RADIUS
+
+
+--- 07 WHITESPACE
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem #4b4646b6;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+/* _______Reusable classes_________ */
+
+.margin-right {
+  margin-right: 1.6rem;
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  /* padding: 0 2rem;  */
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem;
+}
+.margin-bottom-sm {
+  margin-bottom: 2.4rem;
+}
+
+/* _______________Header and nav bar____________ */
+
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  height: 8rem;
+  padding: 0 2.4rem;
+}
+
+.logo {
+  /* width: 12.8rem; */
+  height: 2rem;
+}
+
+/* _________Nav list________ */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #e67e22;
+}
+
+.nav-btn:link,
+.nav-btn:visited {
+  display: inline-block;
+  padding: 1.2rem;
+  border-radius: 8px;
+  background-color: #e67e22;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.nav-btn:hover,
+.nav-btn:active {
+  background-color: white;
+  color: #e67e22;
+  box-shadow: 0 0.2rem 0 #33333387;
+}
+.menu-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.icon-btn {
+  height: 3.8rem;
+  width: 3.8rem;
+  color: #333;
+}
+
+.menu-close[name="close-outline"] {
+  display: none;
+}
+
+/* ________Hero section___________ */
+
+.hero-section {
+  background-color: #fdf2e9;
+  padding: 5.8rem 0 9.6rem 0;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  max-width: 130rem;
+}
+.hero-image {
+  width: 100%;
+}
+
+.hero-heading {
+  font-size: 5.2rem;
+  margin-bottom: 3.2rem;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 4.8rem;
+  color: #3339;
+}
+.cta-btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover,
+.main-btn:link,
+.main-btn:visited {
+  color: white;
+  background-color: #e67e22;
+}
+
+.cta-btn,
+.main-btn:hover,
+.main-btn:active {
+  background-color: #ffffff;
+  color: #e67e22;
+  box-shadow: 0 0.2rem 0 #33333387;
+}
+
+.sec-btn:link,
+.sec-btn:visited {
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.sec-btn:hover,
+.sec-btn:active {
+  color: rgba(0, 0, 0, 0.707);
+  color: #e67e22;
+  box-shadow: 0 0.2rem 0 #33333387;
+}
+
+.margin-right {
+  margin-right: 1.6rem;
+}
+
+.delivered-meals {
+  margin-top: 2.4rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.customers {
+  display: flex;
+  gap: 0.6rem;
+}
+.customer-image {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 0.2rem solid white;
+}
+
+.customer-image:last-child {
+  margin-right: 0;
+}
+
+.delivered-meals-text {
+  font-size: 1.6rem;
+}
+
+.hero-span {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+/* ____________how it is works________________ */
+
+.step-img {
+  width: 35%;
+}
+
+.step-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-image:before,
+.step-image::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 60%;
+}
+.step-image:before {
+  content: "";
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #eaddd2;
+  z-index: -1;
+}
+
+.step-image:after {
+  content: "";
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #ddb5d9;
+  z-index: -1;
+}
+.How-section {
+  margin-top: 9.2rem;
+}
+
+.sub-head {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #e67d22cc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.h2-heading {
+  font-size: 3.6rem;
+  color: black;
+  margin-bottom: 3.6rem;
+}
+
+.step-text {
+  align-self: center;
+}
+.number {
+  font-size: 6.2rem;
+  font-weight: bold;
+  color: #5555554d;
+  margin-bottom: 1.2rem;
+}
+
+.step-des {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: rgba(0, 0, 0, 0.705);
+}
+
+.heading-teritary {
+  font-size: 3rem;
+  margin-bottom: 1.8rem;
+}
+
+/* _______featured in_______ */
+
+.featured-section {
+  margin: 6.4rem 0;
+}
+.feature-in {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 4.2rem 0;
+  color: #333;
+  opacity: 90%;
+}
+
+.feature-logo {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+.feature-flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* _____meals_________ */
+
+.meals-section {
+  margin-top: 9.2rem;
+  margin-bottom: 9.2rem;
+}
+
+.meal-card {
+  max-width: 20rem;
+  max-height: 200rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.diet-card {
+  box-shadow: 0 0 0 0;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  padding: 1.2rem 3.2rem 1.2rem 3.2rem;
+}
+
+.meal-card:hover {
+  transform: translate(0, -2px);
+  transition: all 0.4s;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.571);
+}
+.meal-image {
+  width: 100%;
+  /* border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem; */
+}
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  color: #2b2929;
+  text-transform: uppercase;
+  /* letter-spacing: 0.2rem; */
+  border-radius: 0.8rem;
+}
+
+.tag--vegetarian {
+  background-color: #1af41ab4;
+}
+.tag--vegan {
+  background-color: #49bf40b4;
+}
+.tag--paleo {
+  background-color: #d0f41ab4;
+}
+.margin-bottom {
+  margin-bottom: 1.2rem;
+}
+.meal-title {
+  font-size: 3.2rem;
+  margin-bottom: 1.8rem;
+}
+.meal-lists {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.meal-list {
+  font-size: 1.8rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.icon {
+  color: #e67e22;
+}
+.meal-icon-text {
+  color: #333;
+}
+
+.meal-content {
+  padding: 2.4rem 3.6rem 5.6rem 3.6rem;
+}
+
+.meals-section li ion-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+.diet {
+  padding: 1.2rem 2.4rem 1.2rem 2.4rem;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diet-head {
+  margin: 0 0 1.8rem 0;
+}
+
+.all-receipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.all-recipe:link,
+.all-recipe:visited {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  color: #e67e22;
+  border-bottom: 2px solid currentColor;
+}
+
+.all-recipe:hover,
+.all-recipe:active {
+  color: #e67e22;
+  border-bottom: 1px solid transparent;
+}
+
+/* testimonial section */
+
+.testimonial-section {
+  margin-top: 9.2rem;
+  margin-bottom: 9.2rem;
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonial-container {
+  padding: 2.2rem;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.testimonial-author {
+  font-size: 1.6rem;
+  color: #33333385;
+}
+.test-head {
+  margin-bottom: 1.2rem;
+}
+.test-h2 {
+  margin-bottom: 2.4rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+.gallery-items {
+  overflow: hidden;
+}
+.gallery-items img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+.gallery-items img:hover {
+  transform: scale(1.05);
+}
+.pricing-section {
+  margin-top: 9.2rem;
+  margin-bottom: 9.2rem;
+}
+.plan-header {
+  margin-top: 3.2rem;
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.plan-name {
+  color: #ff7700;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  margin-bottom: 2.4rem;
+}
+.plan-price {
+  font-size: 4.4rem;
+  color: #333;
+  margin-bottom: 2.4rem;
+}
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #3333338b;
+}
+
+.plan-price span {
+  font-size: 2.4rem;
+  margin-right: 0.8rem;
+}
+
+.plan-sign-up {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pricing-item {
+  padding: 2rem;
+  border-radius: 1.1rem;
+  width: 75%;
+}
+.pricing-plan-complete {
+  background-color: #fdf2e9;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan-complete:after {
+  content: "Best value";
+  position: absolute;
+  top: 5%;
+  right: -9%;
+  background-color: #fbff00;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding: 0.8rem 3.2rem;
+  color: #252525;
+  transform: rotate(45deg);
+}
+.pricing-plan-starter {
+  justify-self: right;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+/* Feature section */
+
+.feature {
+  margin-top: 9.2rem;
+  margin-bottom: 9.2rem;
+}
+.feature ion-icon {
+  color: #e67e22;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  background-color: #eaddd2;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+}
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #333333d0;
+}
+
+.plan-details {
+  margin-top: 5.4rem;
+  margin-bottom: 9.2rem;
+  text-align: center;
+}
+
+.tax-disclosure {
+  font-size: 1.6rem;
+  color: #333333d0;
+}
+
+/* CTA section */
+
+.cta-section {
+  margin-bottom: 9.2rem;
+  color: rgb(100, 6, 6);
+}
+
+.cta-heading {
+  color: rgb(100, 6, 6);
+}
+.grid-cta {
+  grid-template-columns: 2fr 1fr;
+  background-color: #e67e22;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.425);
+  border-radius: 1.2rem;
+  background-image: linear-gradient(to bottom right, #e67e22, #ee9d56);
+  overflow: hidden;
+}
+
+.cta-image {
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(230, 126, 32, 0.4),
+      rgb(238, 157, 86, 0.4)
+    ),
+    url(../img/eating.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-text-block {
+  padding: 6rem 6rem 6rem 6rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+.cta-form-grid {
+  column-gap: 3.2rem;
+  row-gap: 3.2rem;
+  align-self: center;
+
+  margin: 4.2rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 0.8rem;
+}
+.cta-form input,
+.cta-form select {
+  font-size: 1.8rem;
+  width: 100%;
+  font-family: inherit;
+  padding: 1.2rem;
+  color: inherit;
+  border: none;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.1 0.2 #333;
+}
+
+.cta-form input::placeholder {
+  color: #33333387;
+}
+
+.cta-form .cta-btn {
+  justify-self: center;
+  border: 1px solid #3333335d;
+  width: 100%;
+  box-shadow: 0 0 0 0;
+  align-self: end;
+  padding: 1.4rem;
+  color: inherit;
+}
+
+/* Footer section */
+
+.footer-section {
+  margin-top: 12.4rem;
+  margin-bottom: 9.2rem;
+}
+
+.footer-head {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-nav-item:link,
+.footer-nav-item:visited {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #333333c8;
+  transition: all 0.3s;
+}
+
+.footer-nav-item:hover,
+.footer-nav-item:active {
+  color: #333333;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.footer-logo {
+  margin-bottom: 1.5rem;
+}
+
+.logo-col-text {
+  margin-top: auto;
+}
+.copyright {
+  font-size: 1.6rem;
+  color: #333333f4;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-info {
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 2rem;
+  color: #333;
+}
+
+.location {
+  margin-bottom: 1.2rem;
+}
+
+.contact {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.6rem 0;
+  color: #333333da;
+}
